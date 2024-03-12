@@ -32,7 +32,7 @@ def predict():
 
     vars = np.array(vars).reshape(1,-1)
 
-    with open("knn.pkl", "rb") as file:
+    with open("lr.pkl", "rb") as file:
         model = pickle.load(file)
 
     result = dict()
