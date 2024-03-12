@@ -41,5 +41,5 @@ def predict():
         # result.headers.add('Access-Control-Allow-Origin', '*')
 
         return result
-    except:
-        return "There was a problem"
+    except Exception as error:
+        return ("Error %s" % error)
