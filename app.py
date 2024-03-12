@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # @app.route("/", methods=['POST'])
-@app.post('/')
+@app.post('/run')
 def predict():
     try:
         data = request.get_json()
@@ -41,5 +41,6 @@ def predict():
         # result.headers.add('Access-Control-Allow-Origin', '*')
 
         return result
+    
     except Exception as error:
         return ("Error %s" % error)
