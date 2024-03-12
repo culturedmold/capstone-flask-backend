@@ -42,4 +42,4 @@ def predict():
 
         return result
     except:
-        return 500
+        return "There was a problem"
