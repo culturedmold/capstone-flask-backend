@@ -1,10 +1,15 @@
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
+import logging
+import sys
 import numpy as np
 import pickle
 
 app = Flask(__name__)
 CORS(app)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 # @app.route("/", methods=['POST'])
 @app.post('/run')
