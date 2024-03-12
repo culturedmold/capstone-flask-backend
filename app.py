@@ -6,7 +6,8 @@ import pickle
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/", methods=['POST'])
+# @app.route("/", methods=['POST'])
+@app.post('/')
 def predict():
     try:
         data = request.get_json()
